@@ -267,6 +267,15 @@ form .btn{align-self:flex-start; margin-top:6px;}
 footer{border-top:1px solid var(--line); padding:34px 0;}
 .footer-flex{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
 .footer-flex .mono{color:var(--ink-soft);}
+.footer-bottom{
+  margin-top:20px; padding-top:20px; border-top:1px solid var(--line);
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+}
+.footer-privacy{ margin:0; font-size:0.82rem; color:var(--ink-soft); }
+.footer-links{ display:flex; gap:10px; align-items:center; font-size:0.82rem; }
+.footer-links a{ color:var(--ink-soft); text-decoration:none; }
+.footer-links a:hover{ color:var(--ink); text-decoration:underline; }
+.footer-links span{ color:var(--line); }
 
 .reveal{opacity:0; transform:translateY(14px); transition:opacity 0.5s ease, transform 0.5s ease;}
 .reveal.visible{opacity:1; transform:translateY(0);}
@@ -336,9 +345,19 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 </section>
 
 <footer>
-  <div class="wrap footer-flex">
-    <div class="logo">The Understood Method</div>
-    <span class="mono">Someone who understands you.</span>
+  <div class="wrap">
+    <div class="footer-flex">
+      <div class="logo">The Understood Method</div>
+      <span class="mono">Someone who understands you.</span>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-privacy">Your information is never sold or shared with third parties.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
   </div>
 </footer>
 
