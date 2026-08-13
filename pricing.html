@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — The Understood Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-soft:#f4f4f1;
+  --ink:#16181d;
+  --ink-soft:#52545c;
+  --indigo:#3b3690;
+  --indigo-deep:#28245e;
+  --coral:#e05a37;
+  --coral-deep:#b8451f;
+  --line: rgba(22,24,29,0.14);
+  --radius: 4px;
+  --maxw: 1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+}
+h1,h2,h3{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  line-height:1.1;
+  margin:0;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+.mono{
+  font-family:'IBM Plex Mono',monospace;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  font-size:0.72rem;
+}
+a{color:inherit;}
+img,svg{display:block; max-width:100%;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+.section{padding:88px 0;}
+@media(max-width:720px){.section{padding:56px 0;}}
+.section-soft{background:var(--bg-soft);}
+
+/* ---------- NAV ---------- */
+header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav{
+  display:flex; align-items:center; justify-content:space-between;
+  max-width:var(--maxw); margin:0 auto; padding:18px 24px;
+}
+.logo{
+  font-family:'Fraunces',serif; font-weight:600; font-size:1.1rem;
+  text-decoration:none; color:var(--ink);
+}
+.nav-links{display:flex; gap:26px; align-items:center; list-style:none; margin:0; padding:0;}
+.nav-links a{
+  font-size:0.92rem; text-decoration:none; color:var(--ink-soft);
+  transition:color 0.15s ease;
+}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a.active{color:var(--ink); font-weight:600;}
+.nav-links .companies-link{ color:var(--indigo); font-weight:600; }
+.nav-cta{
+  font-size:0.85rem; font-weight:600; padding:9px 18px;
+  background:var(--ink); color:#fff; border-radius:var(--radius);
+  text-decoration:none; white-space:nowrap;
+}
+.menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+.menu-toggle svg{width:24px; height:24px;}
+@media(max-width:860px){
+  .nav-links{
+    display:none; position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; align-items:flex-start; gap:0;
+    background:var(--bg); border-bottom:1px solid var(--line);
+    padding:8px 24px 20px;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li{width:100%; padding:12px 0; border-bottom:1px solid var(--line);}
+  .nav-links li:last-child{border-bottom:none;}
+  .menu-toggle{display:block;}
+}
+
+/* ---------- BUTTONS ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 26px; border-radius:var(--radius);
+  font-weight:600; font-size:0.98rem; text-decoration:none;
+  border:1.5px solid transparent; cursor:pointer;
+  transition:transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover{transform:translateY(-1px);}
+.btn-primary{background:var(--indigo); color:#fff;}
+.btn-primary:hover{background:var(--indigo-deep);}
+.btn-ghost{border-color:var(--ink); color:var(--ink); background:transparent;}
+.btn-ghost:hover{background:var(--ink); color:#fff;}
+.btn-coral{background:var(--coral); color:#fff;}
+.btn-coral:hover{background:var(--coral-deep);}
+
+/* ---------- HERO ---------- */
+.hero{padding:76px 0 56px;}
+.eyebrow{
+  color:var(--coral); font-weight:600; margin-bottom:18px;
+  display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{content:""; width:26px; height:1px; background:var(--coral); display:inline-block;}
+.hero h1{ font-size:clamp(2.3rem, 5vw, 3.8rem); max-width:16ch; }
+.hero .sub{ margin-top:22px; max-width:58ch; font-size:1.12rem; color:var(--ink-soft); }
+.hero-ctas{display:flex; gap:16px; margin-top:34px; flex-wrap:wrap;}
+
+.transform-strip{
+  margin-top:52px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.pill{
+  font-family:'IBM Plex Mono',monospace; font-size:0.8rem; font-weight:600;
+  letter-spacing:0.06em; text-transform:uppercase;
+  padding:10px 18px; border-radius:30px; border:1.5px solid;
+}
+.pill-before{ color:var(--coral-deep); border-color:var(--coral); background:#fdf0ec; }
+.pill-after{ color:var(--indigo-deep); border-color:var(--indigo); background:#eeedf9; }
+.transform-arrow{ color:var(--ink-soft); font-size:1.1rem; }
+
+/* ---------- STAT BAR ---------- */
+.statbar{ background:var(--ink); color:#fff; padding:42px 0; }
+.statgrid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  max-width:var(--maxw); margin:0 auto; padding:0 24px;
+}
+.stat-num{ font-family:'Fraunces',serif; font-size:2.5rem; font-weight:600; color:var(--coral); }
+.stat-label{ color:rgba(255,255,255,0.72); font-size:0.88rem; margin-top:6px; }
+@media(max-width:720px){.statgrid{grid-template-columns:1fr; gap:26px; text-align:left;}}
+
+/* ---------- SECTION HEAD ---------- */
+.section-head{margin-bottom:34px;}
+.section-head .mono{color:var(--coral); margin-bottom:10px; display:block;}
+.section-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);}
+.section-head p{color:var(--ink-soft); margin-top:14px; max-width:60ch; font-size:1.02rem;}
+
+/* ---------- ABOUT PROSE ---------- */
+.about-body p{color:var(--ink-soft); margin:0 0 18px; font-size:1.03rem; max-width:68ch;}
+.about-body strong{color:var(--ink);}
+
+/* ---------- JOB HISTORY LIST ---------- */
+.job-list{ border-top:1px solid var(--line); margin-top:40px; }
+.job-item{
+  display:grid; grid-template-columns:64px 1fr; gap:20px;
+  padding:20px 0; border-bottom:1px solid var(--line);
+}
+.job-num{ font-family:'IBM Plex Mono',monospace; color:var(--coral); font-size:0.95rem; padding-top:2px;}
+.job-title{ font-weight:700; font-size:1.02rem; margin-bottom:4px; }
+.job-desc{ color:var(--ink-soft); font-size:0.95rem; }
+.job-item.turning-point .job-num{ color:var(--indigo); }
+.job-item.turning-point .job-title{ color:var(--indigo-deep); }
+
+/* ---------- HOW IT WORKS ---------- */
+.steps{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--line); border:1px solid var(--line); margin-top:8px;
+}
+@media(max-width:760px){.steps{grid-template-columns:1fr;}}
+.step{ background:var(--bg); padding:30px; display:flex; gap:18px; }
+.step-num{
+  font-family:'Fraunces',serif; font-size:2.1rem; font-weight:600; color:var(--coral);
+  line-height:1; flex-shrink:0; min-width:42px;
+}
+.step:nth-child(2n) .step-num{ color:var(--indigo); }
+.step h3{ font-size:1.05rem; margin-bottom:8px; font-weight:700; font-family:'Inter',sans-serif; }
+.step p{ margin:0; color:var(--ink-soft); font-size:0.94rem; }
+
+/* ---------- WHO ---------- */
+.who-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px;}
+@media(max-width:760px){.who-grid{grid-template-columns:1fr;}}
+.who-card{ border:1px solid var(--line); border-radius:var(--radius); padding:28px; background:var(--bg-soft); }
+.who-card .mono{ color:var(--indigo); display:block; margin-bottom:12px; }
+.who-card h3{ font-size:1.25rem; margin-bottom:12px; }
+.who-card ul{ margin:0; padding-left:18px; color:var(--ink-soft); }
+.who-card li{margin-bottom:8px;}
+
+/* ---------- PRICING ---------- */
+.pricing-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:8px; }
+@media(max-width:760px){.pricing-grid{grid-template-columns:1fr;}}
+.price-card{ border:1.5px solid var(--line); border-radius:var(--radius); padding:34px; background:var(--bg); position:relative; }
+.price-card.featured{ border-color:var(--indigo); background:#f7f7fc; }
+.price-badge{
+  position:absolute; top:-13px; left:30px;
+  background:var(--indigo); color:#fff; font-size:0.72rem; font-weight:700;
+  padding:5px 12px; border-radius:20px; letter-spacing:0.04em; text-transform:uppercase;
+}
+.price-name{font-family:'Fraunces',serif; font-size:1.35rem; font-weight:600; margin-bottom:6px;}
+.price-amount{font-size:2.5rem; font-family:'Fraunces',serif; font-weight:600; margin:12px 0 4px;}
+.price-amount sup{font-size:1rem; font-weight:500; top:-1em;}
+.price-note{color:var(--ink-soft); font-size:0.88rem; margin-bottom:22px;}
+.price-card ul{list-style:none; margin:0 0 26px; padding:0;}
+.price-card li{
+  display:flex; gap:10px; padding:9px 0; font-size:0.94rem; color:var(--ink-soft);
+  border-bottom:1px solid var(--line);
+}
+.price-card li:last-child{border-bottom:none;}
+.price-card li::before{content:"—"; color:var(--indigo); flex-shrink:0;}
+.price-card .btn{width:100%; justify-content:center;}
+
+/* ---------- FAQ ---------- */
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; cursor:pointer;
+  padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+  font-family:'Inter',sans-serif; font-size:1.03rem; font-weight:700; color:var(--ink);
+}
+.faq-q .plus{
+  font-family:'IBM Plex Mono',monospace; font-size:1.2rem; color:var(--coral);
+  transition:transform 0.2s ease; flex-shrink:0; margin-left:16px;
+}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{ max-height:0; overflow:hidden; transition:max-height 0.25s ease; color:var(--ink-soft); font-size:0.96rem; }
+.faq-item.open .faq-a{max-height:260px;}
+.faq-a-inner{padding-bottom:22px; max-width:64ch;}
+
+/* ---------- COMPANIES / ENTERPRISE ---------- */
+.companies-hero{ background:var(--indigo); color:#fff; }
+.companies-hero .mono{color:#fbd0be;}
+.companies-hero h1{color:#fff;}
+.companies-hero .sub{color:rgba(255,255,255,0.82);}
+.companies-hero .btn-coral{background:var(--coral);}
+.companies-hero .btn-coral:hover{background:var(--coral-deep);}
+.companies-list{margin-top:8px;}
+.companies-list li{margin-bottom:12px; color:var(--ink-soft); font-size:1.02rem;}
+
+/* ---------- CONTACT ---------- */
+.contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px;}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+.contact-info p{color:var(--ink-soft);}
+.contact-info a.email{
+  display:inline-block; margin-top:6px; font-weight:700; color:var(--indigo);
+  text-decoration:none; border-bottom:1.5px solid var(--indigo); font-size:1.05rem;
+}
+form{display:flex; flex-direction:column; gap:16px;}
+.field label{display:block; font-size:0.82rem; font-weight:600; margin-bottom:6px; color:var(--ink-soft);}
+.field input, .field textarea{
+  width:100%; padding:12px 14px; border:1.5px solid var(--line); border-radius:var(--radius);
+  background:var(--bg); font-family:'Inter',sans-serif; font-size:0.96rem; color:var(--ink);
+}
+.field input:focus, .field textarea:focus{outline:2px solid var(--indigo); outline-offset:1px; border-color:var(--indigo);}
+.field textarea{resize:vertical; min-height:110px;}
+form .btn{align-self:flex-start; margin-top:6px;}
+.form-note{font-size:0.82rem; color:var(--ink-soft); margin-top:4px;}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line); padding:34px 0;}
+.footer-flex{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+.footer-flex .mono{color:var(--ink-soft);}
+
+.reveal{opacity:0; transform:translateY(14px); transition:opacity 0.5s ease, transform 0.5s ease;}
+.reveal.visible{opacity:1; transform:translateY(0);}
+
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">The Understood Method</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">About & The Course</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="companies.html" class="companies-link">For Companies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section hero" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono">Pricing</span>
+      <h2 style="font-size:clamp(2rem,4vw,2.9rem);">Pick how much support you want.</h2>
+      <p>Both options teach the full method. The difference is how much live coaching comes with it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-name">Self-Study</div>
+        <div class="price-amount"><sup>$</sup>297</div>
+        <div class="price-note">One-time payment</div>
+        <ul>
+          <li>Full 7-step video training</li>
+          <li>Downloadable workbook & call scripts</li>
+          <li>Lifetime access to updates</li>
+          <li>Email support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-ghost">Get Started</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-badge">Most Chosen</div>
+        <div class="price-name">Guided</div>
+        <div class="price-amount"><sup>$</sup>697</div>
+        <div class="price-note">One-time payment</div>
+        <ul>
+          <li>Everything in Self-Study</li>
+          <li>2 live coaching calls to practice the method</li>
+          <li>Ongoing check-ins until you've got it down</li>
+          <li>"Graduation" — plus check back in anytime after</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+    <p class="form-note" style="margin-top:22px;">Running a team through this instead? <a href="companies.html" style="color:var(--indigo); font-weight:600;">See company options →</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-flex">
+    <div class="logo">The Understood Method</div>
+    <span class="mono">Someone who understands you.</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if(menuToggle && navLinks){
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+});
+
+</script>
+</body>
+</html>
