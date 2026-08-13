@@ -340,37 +340,37 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
       <p>Company access is priced per team size, billed monthly — built around your onboarding schedule instead of a fixed course. Fill out a few details below and I'll put together a plan for your team specifically.</p>
     </div>
 
-    <form onsubmit="event.preventDefault(); alert('Thanks — this form is a placeholder for now. Update the email above or connect a form service to make this live.');" style="max-width:640px;">
+    <form action="https://formspree.io/f/mvkprdpj" method="POST" style="max-width:640px;">
+      <input type="hidden" name="_subject" value="New company inquiry — The Understood Method">
       <div class="field">
         <label for="company-name">Company name</label>
-        <input type="text" id="company-name" required>
+        <input type="text" id="company-name" name="company_name" required>
       </div>
       <div class="field">
         <label for="contact-name">Point of contact</label>
-        <input type="text" id="contact-name" required>
+        <input type="text" id="contact-name" name="contact_name" required>
       </div>
       <div class="field">
         <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" required>
+        <input type="email" id="contact-email" name="email" required>
       </div>
       <div class="field">
         <label for="company-size">Company size</label>
-        <input type="text" id="company-size" placeholder="e.g. 25 agents, 200 employees">
+        <input type="text" id="company-size" name="company_size" placeholder="e.g. 25 agents, 200 employees">
       </div>
       <div class="field">
         <label for="industry">Industry</label>
-        <input type="text" id="industry" placeholder="e.g. healthcare, retail, insurance">
+        <input type="text" id="industry" name="industry" placeholder="e.g. healthcare, retail, insurance">
       </div>
       <div class="field">
         <label for="use-case">How you'd use the course</label>
-        <input type="text" id="use-case" placeholder="e.g. new hire onboarding, existing team training">
+        <input type="text" id="use-case" name="use_case" placeholder="e.g. new hire onboarding, existing team training">
       </div>
       <div class="field">
         <label for="additional-info">Anything else that would be helpful for me to know before reaching out?</label>
-        <textarea id="additional-info"></textarea>
+        <textarea id="additional-info" name="additional_info"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Get a plan for your team</button>
-      <p class="form-note">This form is a placeholder — connect it to email or a form service before going live.</p>
     </form>
   </div>
 </section>
