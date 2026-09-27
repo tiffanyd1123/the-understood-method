@@ -6,17 +6,17 @@
 <title>Accessibility — The Understood Method</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff;
-  --bg-soft:#f4f4f1;
-  --ink:#16181d;
-  --ink-soft:#52545c;
-  --indigo:#3b3690;
-  --indigo-deep:#28245e;
-  --coral:#e05a37;
-  --coral-deep:#b8451f;
+  --bg:#FAF7EF;
+  --bg-soft:#F1EBDB;
+  --ink:#161616;
+  --ink-soft:#45443F;
+  --indigo:#161616;
+  --indigo-deep:#000000;
+  --coral:#E8B321;
+  --coral-deep:#7A5A06;
   --line: rgba(22,24,29,0.14);
   --radius: 4px;
   --maxw: 1120px;
@@ -37,7 +37,7 @@ body{
   font-size:16px;
 }
 h1,h2,h3{
-  font-family:'Fraunces',serif;
+  font-family:'Anton',Impact,sans-serif;
   font-weight:600;
   line-height:1.1;
   margin:0;
@@ -69,7 +69,7 @@ nav{
   max-width:var(--maxw); margin:0 auto; padding:18px 24px;
 }
 .logo{
-  font-family:'Fraunces',serif; font-weight:600; font-size:1.1rem;
+  font-family:'Anton',Impact,sans-serif; font-weight:600; font-size:1.1rem;
   text-decoration:none; color:var(--ink);
 }
 .nav-links{display:flex; gap:26px; align-items:center; list-style:none; margin:0; padding:0;}
@@ -145,7 +145,7 @@ nav{
   display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
   max-width:var(--maxw); margin:0 auto; padding:0 24px;
 }
-.stat-num{ font-family:'Fraunces',serif; font-size:2.5rem; font-weight:600; color:var(--coral); }
+.stat-num{ font-family:'Anton',Impact,sans-serif; font-size:2.5rem; font-weight:600; color:var(--coral); }
 .stat-label{ color:rgba(255,255,255,0.72); font-size:0.88rem; margin-top:6px; }
 @media(max-width:720px){.statgrid{grid-template-columns:1fr; gap:26px; text-align:left;}}
 
@@ -179,7 +179,7 @@ nav{
 @media(max-width:760px){.steps{grid-template-columns:1fr;}}
 .step{ background:var(--bg); padding:30px; display:flex; gap:18px; }
 .step-num{
-  font-family:'Fraunces',serif; font-size:2.1rem; font-weight:600; color:var(--coral);
+  font-family:'Anton',Impact,sans-serif; font-size:2.1rem; font-weight:600; color:var(--coral);
   line-height:1; flex-shrink:0; min-width:42px;
 }
 .step:nth-child(2n) .step-num{ color:var(--indigo); }
@@ -205,8 +205,8 @@ nav{
   background:var(--indigo); color:#fff; font-size:0.72rem; font-weight:700;
   padding:5px 12px; border-radius:20px; letter-spacing:0.04em; text-transform:uppercase;
 }
-.price-name{font-family:'Fraunces',serif; font-size:1.35rem; font-weight:600; margin-bottom:6px;}
-.price-amount{font-size:2.5rem; font-family:'Fraunces',serif; font-weight:600; margin:12px 0 4px;}
+.price-name{font-family:'Anton',Impact,sans-serif; font-size:1.35rem; font-weight:600; margin-bottom:6px;}
+.price-amount{font-size:2.5rem; font-family:'Anton',Impact,sans-serif; font-weight:600; margin:12px 0 4px;}
 .price-amount sup{font-size:1rem; font-weight:500; top:-1em;}
 .price-note{color:var(--ink-soft); font-size:0.88rem; margin-bottom:22px;}
 .price-card ul{list-style:none; margin:0 0 26px; padding:0;}
@@ -281,7 +281,7 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 .reveal.visible{opacity:1; transform:translateY(0);}
 
 .legal-section{margin-bottom:36px;}
-.legal-section h3{font-size:1.2rem; margin-bottom:12px; font-family:'Fraunces',serif; font-weight:600;}
+.legal-section h3{font-size:1.2rem; margin-bottom:12px; font-family:'Anton',Impact,sans-serif; font-weight:600;}
 .legal-section p{color:var(--ink-soft); font-size:1rem; margin:0 0 14px; max-width:70ch;}
 .legal-section ul{padding-left:20px; margin:0 0 14px;}
 .legal-section li{color:var(--ink-soft); font-size:1rem; margin-bottom:8px; max-width:70ch;}
@@ -289,6 +289,36 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 
 </style>
 
+<style>
+/* ---------- LOUD + LIGHT ---------- */
+h1,h2,h3{font-weight:400; text-transform:uppercase; letter-spacing:0.01em; line-height:0.98;}
+.logo{text-transform:uppercase; letter-spacing:0.03em; font-size:1.25rem; font-weight:400;}
+header{background:rgba(250,247,239,0.96); border-bottom:2px solid var(--ink);}
+.hero{padding:84px 0 64px; border-bottom:2px solid var(--ink);
+  background-image:repeating-linear-gradient(135deg, rgba(232,179,33,0.10) 0 2px, transparent 2px 11px);}
+.hero h1{font-size:clamp(3rem, 8vw, 6.2rem); max-width:15ch; line-height:1.04;}
+.hl{white-space:nowrap; background:linear-gradient(transparent 12%, var(--coral) 12%, var(--coral) 92%, transparent 92%); color:var(--ink); padding:0 0.1em; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
+.hero .sub{font-size:1.15rem; max-width:52ch; margin-top:30px;}
+.eyebrow, .section-head .mono, .job-num{color:var(--coral-deep);}
+.eyebrow::before{background:var(--ink); height:2px;}
+.btn{border-radius:0; font-family:'Anton',Impact,sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.06em; font-size:1.05rem; border-width:2px;}
+.btn-primary, .btn-coral{background:var(--coral); color:var(--ink); border-color:var(--ink);}
+.btn-primary:hover, .btn-coral:hover{background:var(--ink); color:var(--coral);}
+.nav-cta{background:var(--coral); color:var(--ink); border:2px solid var(--ink); border-radius:0; font-weight:700;}
+.statbar{background:var(--ink);}
+.stat-num{font-weight:400; text-transform:uppercase; color:var(--coral);}
+.step-num{color:var(--ink); -webkit-text-stroke:0; }
+.step:nth-child(2n) .step-num{color:var(--coral-deep);}
+.price-card.featured{background:#FFF6DA; border-color:var(--ink);}
+.price-name, .price-amount{font-weight:400;}
+.plus{color:var(--coral-deep)!important;}
+.companies-hero .mono{color:var(--coral)!important;}
+.companies-hero .eyebrow::before{background:var(--coral);}
+.legal-section h3{font-weight:400; letter-spacing:0.02em;}
+.companies-hero .btn-coral{border-color:var(--coral);}
+.companies-hero .btn-coral:hover{background:var(--bg); color:var(--ink);}
+a:focus-visible, .btn:focus-visible{outline:3px solid var(--coral); outline-offset:3px;}
+</style>
 </head>
 <body>
 

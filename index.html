@@ -7,17 +7,17 @@
 <meta name="description" content="A 7-step de-escalation system built from real experience, not a corporate training deck." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff;
-  --bg-soft:#f4f4f1;
-  --ink:#16181d;
-  --ink-soft:#52545c;
-  --indigo:#3b3690;
-  --indigo-deep:#28245e;
-  --coral:#e05a37;
-  --coral-deep:#b8451f;
+  --bg:#FAF7EF;
+  --bg-soft:#F1EBDB;
+  --ink:#161616;
+  --ink-soft:#45443F;
+  --indigo:#161616;
+  --indigo-deep:#000000;
+  --coral:#E8B321;
+  --coral-deep:#7A5A06;
   --line: rgba(22,24,29,0.14);
   --radius: 4px;
   --maxw: 1120px;
@@ -38,7 +38,7 @@ body{
   font-size:16px;
 }
 h1,h2,h3{
-  font-family:'Fraunces',serif;
+  font-family:'Anton',Impact,sans-serif;
   font-weight:600;
   line-height:1.1;
   margin:0;
@@ -70,7 +70,7 @@ nav{
   max-width:var(--maxw); margin:0 auto; padding:18px 24px;
 }
 .logo{
-  font-family:'Fraunces',serif; font-weight:600; font-size:1.1rem;
+  font-family:'Anton',Impact,sans-serif; font-weight:600; font-size:1.1rem;
   text-decoration:none; color:var(--ink);
 }
 .nav-links{display:flex; gap:26px; align-items:center; list-style:none; margin:0; padding:0;}
@@ -146,7 +146,7 @@ nav{
   display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
   max-width:var(--maxw); margin:0 auto; padding:0 24px;
 }
-.stat-num{ font-family:'Fraunces',serif; font-size:2.5rem; font-weight:600; color:var(--coral); }
+.stat-num{ font-family:'Anton',Impact,sans-serif; font-size:2.5rem; font-weight:600; color:var(--coral); }
 .stat-label{ color:rgba(255,255,255,0.72); font-size:0.88rem; margin-top:6px; }
 @media(max-width:720px){.statgrid{grid-template-columns:1fr; gap:26px; text-align:left;}}
 
@@ -180,7 +180,7 @@ nav{
 @media(max-width:760px){.steps{grid-template-columns:1fr;}}
 .step{ background:var(--bg); padding:30px; display:flex; gap:18px; }
 .step-num{
-  font-family:'Fraunces',serif; font-size:2.1rem; font-weight:600; color:var(--coral);
+  font-family:'Anton',Impact,sans-serif; font-size:2.1rem; font-weight:600; color:var(--coral);
   line-height:1; flex-shrink:0; min-width:42px;
 }
 .step:nth-child(2n) .step-num{ color:var(--indigo); }
@@ -206,8 +206,8 @@ nav{
   background:var(--indigo); color:#fff; font-size:0.72rem; font-weight:700;
   padding:5px 12px; border-radius:20px; letter-spacing:0.04em; text-transform:uppercase;
 }
-.price-name{font-family:'Fraunces',serif; font-size:1.35rem; font-weight:600; margin-bottom:6px;}
-.price-amount{font-size:2.5rem; font-family:'Fraunces',serif; font-weight:600; margin:12px 0 4px;}
+.price-name{font-family:'Anton',Impact,sans-serif; font-size:1.35rem; font-weight:600; margin-bottom:6px;}
+.price-amount{font-size:2.5rem; font-family:'Anton',Impact,sans-serif; font-weight:600; margin:12px 0 4px;}
 .price-amount sup{font-size:1rem; font-weight:500; top:-1em;}
 .price-note{color:var(--ink-soft); font-size:0.88rem; margin-bottom:22px;}
 .price-card ul{list-style:none; margin:0 0 26px; padding:0;}
@@ -282,6 +282,33 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 .reveal.visible{opacity:1; transform:translateY(0);}
 
 </style>
+<style>
+/* ---------- LOUD + LIGHT ---------- */
+h1,h2,h3{font-weight:400; text-transform:uppercase; letter-spacing:0.01em; line-height:0.98;}
+.logo{text-transform:uppercase; letter-spacing:0.03em; font-size:1.25rem; font-weight:400;}
+header{background:rgba(250,247,239,0.96); border-bottom:2px solid var(--ink);}
+.hero{padding:84px 0 64px; border-bottom:2px solid var(--ink);
+  background-image:repeating-linear-gradient(135deg, rgba(232,179,33,0.10) 0 2px, transparent 2px 11px);}
+.hero h1{font-size:clamp(3rem, 8vw, 6.2rem); max-width:15ch; line-height:1.04;}
+.hl{white-space:nowrap; background:linear-gradient(transparent 12%, var(--coral) 12%, var(--coral) 92%, transparent 92%); color:var(--ink); padding:0 0.1em; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
+.hero .sub{font-size:1.15rem; max-width:52ch; margin-top:30px;}
+.eyebrow, .section-head .mono, .job-num{color:var(--coral-deep);}
+.eyebrow::before{background:var(--ink); height:2px;}
+.btn{border-radius:0; font-family:'Anton',Impact,sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.06em; font-size:1.05rem; border-width:2px;}
+.btn-primary, .btn-coral{background:var(--coral); color:var(--ink); border-color:var(--ink);}
+.btn-primary:hover, .btn-coral:hover{background:var(--ink); color:var(--coral);}
+.nav-cta{background:var(--coral); color:var(--ink); border:2px solid var(--ink); border-radius:0; font-weight:700;}
+.statbar{background:var(--ink);}
+.stat-num{font-weight:400; text-transform:uppercase; color:var(--coral);}
+.step-num{color:var(--ink); -webkit-text-stroke:0; }
+.step:nth-child(2n) .step-num{color:var(--coral-deep);}
+.price-card.featured{background:#FFF6DA; border-color:var(--ink);}
+.price-name, .price-amount{font-weight:400;}
+.plus{color:var(--coral-deep)!important;}
+.companies-hero .mono{color:var(--coral)!important;}
+.companies-hero .eyebrow::before{background:var(--coral);}
+a:focus-visible, .btn:focus-visible{outline:3px solid var(--coral); outline-offset:3px;}
+</style>
 </head>
 <body>
 
@@ -305,7 +332,7 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow mono">Built from real experience, not a training deck</div>
-    <h1>You didn't sign up to get yelled at.</h1>
+    <h1>You didn't sign up to get <span class="hl">yelled at.</span></h1>
     <p class="sub">The Understood Method is a 7-step system that turns furious callers into resolved ones — built by someone who spent years on the phones and figured out what actually works.</p>
     <div class="hero-ctas">
       <a href="pricing.html" class="btn btn-primary">See the training</a>
@@ -317,16 +344,16 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
 <div class="statbar">
   <div class="statgrid">
     <div class="reveal">
-      <div class="stat-num">75%</div>
-      <div class="stat-label">First-attempt effectiveness rate</div>
+      <div class="stat-num">1 line</div>
+      <div class="stat-label">Does most of the heavy lifting</div>
     </div>
     <div class="reveal">
       <div class="stat-num">7</div>
       <div class="stat-label">Steps, start to resolution</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">~1 wk</div>
-      <div class="stat-label">To learn it well enough to use</div>
+      <div class="stat-num">1 day</div>
+      <div class="stat-label">To learn the steps</div>
     </div>
   </div>
 </div>
@@ -335,57 +362,10 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
   <div class="wrap">
     <div class="section-head">
       <span class="mono">About Me</span>
-      <h2>Every job that got me here.</h2>
+      <h2>The calls nobody wanted.</h2>
     </div>
     <div class="about-body">
-      <p>I started working at sixteen, and I've had a lot of jobs since. Each one taught me something about people — mostly about what people need when they're upset. Here's the honest version, start to finish.</p>
-    </div>
-
-    <div class="job-list">
-      <div class="job-item reveal">
-        <div class="job-num">01</div>
-        <div><div class="job-title">Sonic — Carhop</div><div class="job-desc">My first job at sixteen. I was so bad on skates that I kept crashing into people's cars. They moved me to the counter, which nobody was thrilled about.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">02</div>
-        <div><div class="job-title">Pilot Travel Center — Server</div><div class="job-desc">Worked the restaurant side of a truck stop.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">03</div>
-        <div><div class="job-title">Travel Centers of America — Cashier</div><div class="job-desc">A second truck stop, directly across the street from the first. I worked both at once.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">04</div>
-        <div><div class="job-title">McDonald's — Overnight Cashier</div><div class="job-desc">Night shift work while I kept the rest of my schedule going.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">05</div>
-        <div><div class="job-title">Wendy's — Cashier</div><div class="job-desc">Another shift, another counter.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">06</div>
-        <div><div class="job-title">A Few Different Restaurants — Server</div><div class="job-desc">Served at a handful of restaurants before moving into call center work.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">07</div>
-        <div><div class="job-title">Apple Call Center — Tier 1 Support</div><div class="job-desc">Started in technical support, then got promoted to Tier 1.5, handling both iOS and macOS devices.</div></div>
-      </div>
-      <div class="job-item reveal">
-        <div class="job-num">08</div>
-        <div><div class="job-title">Rewards Call Center — Agent, then Escalation Lead</div><div class="job-desc">Worked a year as an agent, then got promoted to Escalation Lead. I took the calls nobody wanted — and the calls where someone just wanted to say a good word about the agent who'd helped them.</div></div>
-      </div>
-      <div class="job-item reveal turning-point">
-        <div class="job-num">09</div>
-        <div><div class="job-title">Losing my grandmother, my apartment, and my job</div><div class="job-desc">It all happened around the same time. The hardest stretch I've been through, and I was without a place to live for a while.</div></div>
-      </div>
-      <div class="job-item reveal turning-point">
-        <div class="job-num">10</div>
-        <div><div class="job-title">Rebuilding, from the ground up</div><div class="job-desc">I put myself back together, piece by piece.</div></div>
-      </div>
-      <div class="job-item reveal turning-point">
-        <div class="job-num">11</div>
-        <div><div class="job-title">Today — Teaching the system</div><div class="job-desc">I don't expect everyone taking this course to have lived through everything I have. But if you've been through even a piece of it, I think you'll understand why I built this the way I did. That's where the system came from.</div></div>
-      </div>
+      <p style="font-size:1.15rem; max-width:60ch;">I've been working since I was sixteen. Carhop, truck stops, fast food, restaurants. Then call centers. I did tech support at Apple, then became an escalation lead at another call center, which means I took the calls nobody else wanted. Years of that taught me what upset people actually need. This course is everything I figured out along the way.</p>
     </div>
   </div>
 </section>
@@ -399,7 +379,7 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
     <div class="steps">
       <div class="step reveal">
         <div class="step-num">01</div>
-        <div><h3>Get the full picture first</h3><p>Before you ever talk to the customer, get the reason for the escalation from the last agent. Keep it simple. Repeat it back so nothing gets lost in the handoff.</p></div>
+        <div><h3>Get the full picture first</h3><p>Before you ever talk to the customer, get the reason for the escalation from the last agent, if applicable. Keep it simple. Repeat it back so nothing gets lost in the handoff.</p></div>
       </div>
       <div class="step reveal">
         <div class="step-num">02</div>
@@ -449,12 +429,12 @@ footer{border-top:1px solid var(--line); padding:34px 0;}
         </ul>
       </div>
       <div class="who-card reveal">
-        <span class="mono">Agents chasing a promotion</span>
+        <span class="mono">Experienced agents</span>
         <h3>Fix what's holding you back</h3>
         <ul>
           <li>Better first-call resolution, fewer callbacks</li>
           <li>A calmer tone under pressure, on record</li>
-          <li>The exact thing I had to fix to get promoted</li>
+          <li>Handle the calls that used to throw you off</li>
         </ul>
       </div>
     </div>
